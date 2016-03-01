@@ -355,7 +355,7 @@ public class french
 		list.add("vendredi");
 		list.add("samedi");
 		list.add("dimanche");
-		return list;
+		return numbersList;
 	}
 
 	public static ArrayList<String> getEtreList()
