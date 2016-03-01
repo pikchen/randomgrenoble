@@ -27,7 +27,7 @@ public class french
 			}else if("3".equals(choice)){
 				months(sc,months,false);
 			}else if("0".equals(choice)){
-				randThreeCat(sc, numbers, days, months);
+				randCat(sc, numbers, days, months);
 			}
 		}
 		
@@ -38,7 +38,7 @@ public class french
 		months.clear();
 	}
 
-	public static void randThreeCat(
+	public static void randCat(
 		Scanner sc,
 		ArrayList<String> numbers,
 		ArrayList<String> days,
