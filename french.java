@@ -347,16 +347,16 @@ public class french
 		return list;
 	}
 
-	public static ArrayList<String> getEtre()
+	public static ArrayList<String> getEtreList()
 	{
-		ArrayList<String> list = new ArrayList<String>();
-		list.add("suis");
-		list.add("es");
-		list.add("est");
-		list.add("est");
-		list.add("sommes");
-		list.add("etes");
-		list.add("sont");
-		return list;
+		ArrayList<String> etreList = new ArrayList<String>();
+		etreList.add("suis");
+		etreList.add("es");
+		etreList.add("est");
+		etreList.add("est");
+		etreList.add("sommes");
+		etreList.add("etes");
+		etreList.add("sont");
+		return etreList;
 	}
 }
