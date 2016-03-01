@@ -368,6 +368,7 @@ public class french
 		etreList.add("sommes");
 		etreList.add("etes");
 		etreList.add("sont");
+		etreList.add("sont");
 		return etreList;
 	}
 }
