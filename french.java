@@ -5,7 +5,7 @@ public class french
 	{
 		Scanner sc = new Scanner(System.in);
 		String choice = "";
-		ArrayList<String> numbers = getNumbers();
+		ArrayList<String> numbers = getNumbersList();
 		ArrayList<String> months = getMonths();
 		ArrayList<String> days = getDays();
 		while(!choice.equalsIgnoreCase("quit")){
