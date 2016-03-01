@@ -7,7 +7,7 @@ public class french
 		String choice = "";
 		ArrayList<String> numbers = getNumbersList();
 		ArrayList<String> months = getMonthsList();
-		ArrayList<String> days = getDays();
+		ArrayList<String> days = getDaysList();
 		while(!choice.equalsIgnoreCase("quit")){
 			System.out.println("Select the course you would like to practice:");
 			System.out.println("1. Numbers");
@@ -384,17 +384,17 @@ public class french
 		
 	}
 	
-	public static ArrayList<String> getDays()
+	public static ArrayList<String> getDaysList()
 	{
-		ArrayList<String> list = new ArrayList<String>();
-		list.add("lundi");
-		list.add("mardi");
-		list.add("mercredi");
-		list.add("jeudi");
-		list.add("vendredi");
-		list.add("samedi");
-		list.add("dimanche");
-		return list;
+		ArrayList<String> daysList = new ArrayList<String>();
+		daysList.add("lundi");
+		daysList.add("mardi");
+		daysList.add("mercredi");
+		daysList.add("jeudi");
+		daysList.add("vendredi");
+		daysList.add("samedi");
+		daysList.add("dimanche");
+		return daysList;
 	}
 
 	public static ArrayList<String> getEtreList()
