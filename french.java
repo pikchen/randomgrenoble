@@ -5,7 +5,7 @@ public class french
 	{
 		Scanner sc = new Scanner(System.in);
 		String choice = "";
-		ArrayList<String> numbers = getNumbers();
+		ArrayList<String> numbers = getNumbersList();
 		ArrayList<String> months = getMonths();
 		ArrayList<String> days = getDays();
 		while(!choice.equalsIgnoreCase("quit")){
@@ -55,6 +55,56 @@ public class french
 			}else doQuitRandom = numbers(sc,numbers,true);
 		}
 		System.out.println("");
+	}
+
+	/**
+	 * @return whether or not to 'quit' was issued
+	 */
+	public static boolean runEtre(
+		Scanner sc,
+		ArrayList<String> etreList,
+		boolean isRandomCategories
+	){
+		Random dice = new Random();
+		String pronoun = "";
+		String answer = "";
+		int rand = 0;
+
+		while(!answer.trim().equalsIgnoreCase("QUIT"))
+		{
+			rand = dice.nextInt(7);
+			switch(rand)
+			{
+				case 0:
+					pronoun = "je";
+					break;
+				case 1:
+					pronoun = "tu";
+					break;
+				case 2:
+					pronoun = "il";
+					break;
+				case 3:
+					pronoun = "elle";
+					break;
+				case 4:
+					pronoun = "nous";
+					break;
+				case 5:
+					pronoun = "vous";
+					break;
+				case 6:
+					pronoun = "ils";
+					break;
+				case 7:
+					pronoun = "elles";
+					break;
+				default:
+					pronoun = "error";
+					break;
+			}
+		}
+		return false;
 	}
 	
 	/**
@@ -109,7 +159,7 @@ public class french
 		while(!answer.trim().equalsIgnoreCase("QUIT")){
 			rand = dice.nextInt(7);
 			String day = "";
-			if(rand==0){
+			if(rand==0){ //TODO : refactor into a getDay() method
 				day = "Monday";
 			}else if(rand==1){
 				day = "Tuesday";
@@ -161,7 +211,7 @@ public class french
 		while(!answer.trim().equalsIgnoreCase("QUIT")){
 			rand = dice.nextInt(12);
 			String month = "";
-			if(rand==0){
+			if(rand==0){ //TODO : refactor into a getMonth() method
 				month = "January";
 			}else if(rand==1){
 				month = "February";
@@ -208,111 +258,111 @@ public class french
 		return true;
 	}
 	
-	public static ArrayList<String> getNumbers()
+	public static ArrayList<String> getNumbersList()
 	{
-		ArrayList<String> list = new ArrayList<String>();
-		list.add("zero");
-		list.add("un");
-		list.add("deux");
-		list.add("trois");
-		list.add("quatre");
-		list.add("cinq");
-		list.add("six");
-		list.add("sept");
-		list.add("huit");
-		list.add("neuf");
-		list.add("dix");
-		list.add("onze");
-		list.add("douze");
-		list.add("treize");
-		list.add("quatorze");
-		list.add("quinze");
-		list.add("seize");
-		list.add("dix sept");
-		list.add("dix huit");
-		list.add("dix neuf");
-		list.add("vingt");
-		list.add("vingt et un");
-		list.add("vingt deux");
-		list.add("vingt trois");
-		list.add("vingt quatre");
-		list.add("vingt cinq");
-		list.add("vingt six");
-		list.add("vingt sept");
-		list.add("vingt huit");
-		list.add("vingt neuf");
-		list.add("trente");
-		list.add("trente et un");
-		list.add("trente deux");
-		list.add("trente trois");
-		list.add("trente quatre");
-		list.add("trente cinq");
-		list.add("trente six");
-		list.add("trente sept");
-		list.add("trente huit");
-		list.add("trente neuf");
-		list.add("quarante");
-		list.add("quarante et un");
-		list.add("quarante deux");
-		list.add("quarante trois");
-		list.add("quarante quatre");
-		list.add("quarante cinq");
-		list.add("quarante six");
-		list.add("quarante sept");
-		list.add("quarante huit");
-		list.add("quarante neuf");
-		list.add("cinquante");
-		list.add("cinquante et un");
-		list.add("cinquante deux");
-		list.add("cinquante trois");
-		list.add("cinquante quatre");
-		list.add("cinquante cinq");
-		list.add("cinquante six");
-		list.add("cinquante sept");
-		list.add("cinquante huit");
-		list.add("cinquante neuf");
-		list.add("soixante");
-		list.add("soixante et un");
-		list.add("soixante deux");
-		list.add("soixante trois");
-		list.add("soixante quatre");
-		list.add("soixante cinq");
-		list.add("soixante six");
-		list.add("soixante sept");
-		list.add("soixante huit");
-		list.add("soixante neuf");
-		list.add("soixante dix");
-		list.add("soixante et onze");
-		list.add("soixante douze");
-		list.add("soixante treize");
-		list.add("soixante quatorze");
-		list.add("soixante quinze");
-		list.add("soixante seize");
-		list.add("soixante dix sept");
-		list.add("soixante dix huit");
-		list.add("soixante dix neuf");
-		list.add("quatre vingt");
-		list.add("quatre vingt un");
-		list.add("quatre vingt deux");
-		list.add("quatre vingt trois");
-		list.add("quatre vingt quatre");
-		list.add("quatre vingt cinq");
-		list.add("quatre vingt six");
-		list.add("quatre vingt sept");
-		list.add("quatre vingt huit");
-		list.add("quatre vingt neuf");
-		list.add("quatre vingt dix");
-		list.add("quatre vingt onze");
-		list.add("quatre vingt douze");
-		list.add("quatre vingt treize");
-		list.add("quatre vingt quatorze");
-		list.add("quatre vingt quinze");
-		list.add("quatre vingt seize");
-		list.add("quatre vingt dix sept");
-		list.add("quatre vingt dix huit");
-		list.add("quatre vingt dix neuf");
-		list.add("cent");
-		return list;
+		ArrayList<String> numbersList = new ArrayList<String>();
+		numbersList.add("zero");
+		numbersList.add("un");
+		numbersList.add("deux");
+		numbersList.add("trois");
+		numbersList.add("quatre");
+		numbersList.add("cinq");
+		numbersList.add("six");
+		numbersList.add("sept");
+		numbersList.add("huit");
+		numbersList.add("neuf");
+		numbersList.add("dix");
+		numbersList.add("onze");
+		numbersList.add("douze");
+		numbersList.add("treize");
+		numbersList.add("quatorze");
+		numbersList.add("quinze");
+		numbersList.add("seize");
+		numbersList.add("dix sept");
+		numbersList.add("dix huit");
+		numbersList.add("dix neuf");
+		numbersList.add("vingt");
+		numbersList.add("vingt et un");
+		numbersList.add("vingt deux");
+		numbersList.add("vingt trois");
+		numbersList.add("vingt quatre");
+		numbersList.add("vingt cinq");
+		numbersList.add("vingt six");
+		numbersList.add("vingt sept");
+		numbersList.add("vingt huit");
+		numbersList.add("vingt neuf");
+		numbersList.add("trente");
+		numbersList.add("trente et un");
+		numbersList.add("trente deux");
+		numbersList.add("trente trois");
+		numbersList.add("trente quatre");
+		numbersList.add("trente cinq");
+		numbersList.add("trente six");
+		numbersList.add("trente sept");
+		numbersList.add("trente huit");
+		numbersList.add("trente neuf");
+		numbersList.add("quarante");
+		numbersList.add("quarante et un");
+		numbersList.add("quarante deux");
+		numbersList.add("quarante trois");
+		numbersList.add("quarante quatre");
+		numbersList.add("quarante cinq");
+		numbersList.add("quarante six");
+		numbersList.add("quarante sept");
+		numbersList.add("quarante huit");
+		numbersList.add("quarante neuf");
+		numbersList.add("cinquante");
+		numbersList.add("cinquante et un");
+		numbersList.add("cinquante deux");
+		numbersList.add("cinquante trois");
+		numbersList.add("cinquante quatre");
+		numbersList.add("cinquante cinq");
+		numbersList.add("cinquante six");
+		numbersList.add("cinquante sept");
+		numbersList.add("cinquante huit");
+		numbersList.add("cinquante neuf");
+		numbersList.add("soixante");
+		numbersList.add("soixante et un");
+		numbersList.add("soixante deux");
+		numbersList.add("soixante trois");
+		numbersList.add("soixante quatre");
+		numbersList.add("soixante cinq");
+		numbersList.add("soixante six");
+		numbersList.add("soixante sept");
+		numbersList.add("soixante huit");
+		numbersList.add("soixante neuf");
+		numbersList.add("soixante dix");
+		numbersList.add("soixante et onze");
+		numbersList.add("soixante douze");
+		numbersList.add("soixante treize");
+		numbersList.add("soixante quatorze");
+		numbersList.add("soixante quinze");
+		numbersList.add("soixante seize");
+		numbersList.add("soixante dix sept");
+		numbersList.add("soixante dix huit");
+		numbersList.add("soixante dix neuf");
+		numbersList.add("quatre vingt");
+		numbersList.add("quatre vingt un");
+		numbersList.add("quatre vingt deux");
+		numbersList.add("quatre vingt trois");
+		numbersList.add("quatre vingt quatre");
+		numbersList.add("quatre vingt cinq");
+		numbersList.add("quatre vingt six");
+		numbersList.add("quatre vingt sept");
+		numbersList.add("quatre vingt huit");
+		numbersList.add("quatre vingt neuf");
+		numbersList.add("quatre vingt dix");
+		numbersList.add("quatre vingt onze");
+		numbersList.add("quatre vingt douze");
+		numbersList.add("quatre vingt treize");
+		numbersList.add("quatre vingt quatorze");
+		numbersList.add("quatre vingt quinze");
+		numbersList.add("quatre vingt seize");
+		numbersList.add("quatre vingt dix sept");
+		numbersList.add("quatre vingt dix huit");
+		numbersList.add("quatre vingt dix neuf");
+		numbersList.add("cent");
+		return numbersList;
 	}
 	
 	public static ArrayList<String> getMonths()
@@ -345,5 +395,19 @@ public class french
 		list.add("samedi");
 		list.add("dimanche");
 		return list;
+	}
+
+	public static ArrayList<String> getEtreList()
+	{
+		ArrayList<String> etreList = new ArrayList<String>();
+		etreList.add("suis");
+		etreList.add("es");
+		etreList.add("est");
+		etreList.add("est");
+		etreList.add("sommes");
+		etreList.add("etes");
+		etreList.add("sont");
+		etreList.add("sont");
+		return etreList;
 	}
 }
