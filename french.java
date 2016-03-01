@@ -56,6 +56,17 @@ public class french
 		}
 		System.out.println("");
 	}
+
+	/**
+	 * @return whether or not to 'quit' was issued
+	 */
+	public static boolean runEtre(
+		Scanner sc,
+		ArrayList<String> etreList,
+		boolean isRandomCategories
+	){
+		return false;
+	}
 	
 	/**
 	 * @return whether or not to 'quit' was issued
