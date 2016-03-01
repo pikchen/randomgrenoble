@@ -6,7 +6,7 @@ public class french
 		Scanner sc = new Scanner(System.in);
 		String choice = "";
 		ArrayList<String> numbers = getNumbersList();
-		ArrayList<String> months = getMonths();
+		ArrayList<String> months = getMonthsList();
 		ArrayList<String> days = getDays();
 		while(!choice.equalsIgnoreCase("quit")){
 			System.out.println("Select the course you would like to practice:");
@@ -365,22 +365,22 @@ public class french
 		return numbersList;
 	}
 	
-	public static ArrayList<String> getMonths()
+	public static ArrayList<String> getMonthsList()
 	{
-		ArrayList<String> list = new ArrayList<String>();
-		list.add("janvier");
-		list.add("fevrier");
-		list.add("mars");
-		list.add("avril");
-		list.add("mai");
-		list.add("juin");
-		list.add("juillet");
-		list.add("aout");
-		list.add("septembre");
-		list.add("octobre");
-		list.add("novembre");
-		list.add("decembre");
-		return list;
+		ArrayList<String> monthsList = new ArrayList<String>();
+		monthsList.add("janvier");
+		monthsList.add("fevrier");
+		monthsList.add("mars");
+		monthsList.add("avril");
+		monthsList.add("mai");
+		monthsList.add("juin");
+		monthsList.add("juillet");
+		monthsList.add("aout");
+		monthsList.add("septembre");
+		monthsList.add("octobre");
+		monthsList.add("novembre");
+		monthsList.add("decembre");
+		return monthsList;
 		
 	}
 	
