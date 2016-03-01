@@ -65,6 +65,45 @@ public class french
 		ArrayList<String> etreList,
 		boolean isRandomCategories
 	){
+		Random dice = new Random();
+		String pronoun = "";
+		String answer = "";
+		int rand = 0;
+
+		while(!answer.trim().equalsIgnoreCase("QUIT"))
+		{
+			rand = dice.nextInt(7);
+			switch(rand)
+			{
+				case 0:
+					pronoun = "je";
+					break;
+				case 1:
+					pronoun = "tu";
+					break;
+				case 2:
+					pronoun = "il";
+					break;
+				case 3:
+					pronoun = "elle";
+					break;
+				case 4:
+					pronoun = "nous";
+					break;
+				case 5:
+					pronoun = "vous";
+					break;
+				case 6:
+					pronoun = "ils";
+					break;
+				case 7:
+					pronoun = "elles";
+					break;
+				default:
+					pronoun = "error";
+					break;
+			}
+		}
 		return false;
 	}
 	
