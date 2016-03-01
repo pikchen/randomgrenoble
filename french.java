@@ -13,7 +13,7 @@ public class french
 			System.out.println("1. Numbers");
 			System.out.println("2. Days");
 			System.out.println("3. Months");
-			System.out.println("4. Random from Any Three");
+			System.out.println("0. Random from Any Category");
 			System.out.print("Choice: ");
 			choice = sc.nextLine();
 			if(choice==null){
@@ -26,7 +26,7 @@ public class french
 				days(sc,days,false);
 			}else if("3".equals(choice)){
 				months(sc,months,false);
-			}else if("4".equals(choice)){
+			}else if("0".equals(choice)){
 				randThreeCat(sc, numbers, days, months);
 			}
 		}
