@@ -346,4 +346,17 @@ public class french
 		list.add("dimanche");
 		return list;
 	}
+
+	public static ArrayList<String> getEtre()
+	{
+		ArrayList<String> list = new ArrayList<String>();
+		list.add("suis");
+		list.add("es");
+		list.add("est");
+		list.add("est");
+		list.add("sommes");
+		list.add("etes");
+		list.add("sont");
+		return list;
+	}
 }
