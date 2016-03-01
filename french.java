@@ -120,7 +120,7 @@ public class french
 		while(!answer.trim().equalsIgnoreCase("QUIT")){
 			rand = dice.nextInt(7);
 			String day = "";
-			if(rand==0){ //TODO : refactor into a getMonth() method
+			if(rand==0){ //TODO : refactor into a getDay() method
 				day = "Monday";
 			}else if(rand==1){
 				day = "Tuesday";
@@ -172,7 +172,7 @@ public class french
 		while(!answer.trim().equalsIgnoreCase("QUIT")){
 			rand = dice.nextInt(12);
 			String month = "";
-			if(rand==0){ //TODO : refactor into a getDay() method
+			if(rand==0){ //TODO : refactor into a getMonth() method
 				month = "January";
 			}else if(rand==1){
 				month = "February";
