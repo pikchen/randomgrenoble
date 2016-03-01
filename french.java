@@ -362,7 +362,7 @@ public class french
 		numbersList.add("quatre vingt dix huit");
 		numbersList.add("quatre vingt dix neuf");
 		numbersList.add("cent");
-		return list;
+		return numbersList;
 	}
 	
 	public static ArrayList<String> getMonths()
@@ -380,7 +380,7 @@ public class french
 		list.add("octobre");
 		list.add("novembre");
 		list.add("decembre");
-		return numbersList;
+		return list;
 		
 	}
 	
@@ -394,7 +394,7 @@ public class french
 		list.add("vendredi");
 		list.add("samedi");
 		list.add("dimanche");
-		return numbersList;
+		return list;
 	}
 
 	public static ArrayList<String> getEtreList()
