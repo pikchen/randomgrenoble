@@ -341,7 +341,7 @@ public class french
 		list.add("octobre");
 		list.add("novembre");
 		list.add("decembre");
-		return list;
+		return numbersList;
 		
 	}
 	
